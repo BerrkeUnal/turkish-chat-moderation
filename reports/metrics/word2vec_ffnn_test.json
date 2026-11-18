@@ -1,0 +1,38 @@
+{
+  "model_name": "Word2Vec Feedforward Network",
+  "split": "test",
+  "sample_count": 3528,
+  "model_size_mb": 27.110305,
+  "metrics": {
+    "accuracy": 0.765023,
+    "balanced_accuracy": 0.706852,
+    "macro_f1": 0.678916,
+    "offensive_precision": 0.44264,
+    "offensive_recall": 0.608939,
+    "offensive_f1": 0.51264,
+    "confusion_matrix": {
+      "true_negative": 2263,
+      "false_positive": 549,
+      "false_negative": 280,
+      "true_positive": 436
+    }
+  },
+  "latency": {
+    "measured_runs": 3528,
+    "mean_ms": 0.05868,
+    "median_ms": 0.055667,
+    "p95_ms": 0.083402,
+    "p99_ms": 0.090925,
+    "minimum_ms": 0.039209,
+    "maximum_ms": 0.181541,
+    "warmup_runs": 10
+  },
+  "average_confidence": 0.711928,
+  "hardware": {
+    "processor": "Apple M4",
+    "memory_gb": 24,
+    "architecture": "arm64",
+    "operating_system": "macOS",
+    "benchmark_device": "CPU"
+  }
+}

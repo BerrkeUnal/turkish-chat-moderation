@@ -1,0 +1,38 @@
+{
+  "model_name": "Rule-Based Edit Distance",
+  "split": "test",
+  "sample_count": 3528,
+  "model_size_mb": 0.000351,
+  "metrics": {
+    "accuracy": 0.826531,
+    "balanced_accuracy": 0.595528,
+    "macro_f1": 0.613223,
+    "offensive_precision": 0.770833,
+    "offensive_recall": 0.206704,
+    "offensive_f1": 0.325991,
+    "confusion_matrix": {
+      "true_negative": 2768,
+      "false_positive": 44,
+      "false_negative": 568,
+      "true_positive": 148
+    }
+  },
+  "latency": {
+    "measured_runs": 3528,
+    "mean_ms": 0.10043,
+    "median_ms": 0.070167,
+    "p95_ms": 0.196652,
+    "p99_ms": 0.230006,
+    "minimum_ms": 0.022458,
+    "maximum_ms": 52.55425,
+    "warmup_runs": 10
+  },
+  "average_confidence": 0.995824,
+  "hardware": {
+    "processor": "Apple M4",
+    "memory_gb": 24,
+    "architecture": "arm64",
+    "operating_system": "macOS",
+    "benchmark_device": "CPU"
+  }
+}

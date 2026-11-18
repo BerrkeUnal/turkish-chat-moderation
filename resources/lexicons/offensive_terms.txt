@@ -1,0 +1,27 @@
+# Content warning: This file contains explicit Turkish offensive terms.
+# Terms are used exclusively for academic detection and evaluation.
+# They must not be displayed unmasked in the application.
+aptal
+salak
+gerizekalı
+ahmak
+şerefsiz
+haysiyetsiz
+pislik
+dangalak
+embesil
+terbiyesiz
+alçak
+yavşak
+öküz
+eşek
+amk
+aq
+orospu
+piç
+siktir
+sik
+yarrak
+göt
+pezevenk
+ibne

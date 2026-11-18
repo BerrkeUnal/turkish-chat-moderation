@@ -1,0 +1,42 @@
+{
+  "model_name": "TF-IDF Logistic Regression",
+  "split": "validation",
+  "sample_count": 3175,
+  "model_size_mb": 2.069803,
+  "metrics": {
+    "accuracy": 0.857953,
+    "balanced_accuracy": 0.776714,
+    "macro_f1": 0.774154,
+    "offensive_precision": 0.628981,
+    "offensive_recall": 0.644372,
+    "offensive_f1": 0.636583,
+    "confusion_matrix": {
+      "true_negative": 2329,
+      "false_positive": 233,
+      "false_negative": 218,
+      "true_positive": 395
+    }
+  },
+  "latency": {
+    "measured_runs": 3175,
+    "mean_ms": 0.593779,
+    "median_ms": 0.576209,
+    "p95_ms": 0.721033,
+    "p99_ms": 0.752468,
+    "minimum_ms": 0.48075,
+    "maximum_ms": 0.824625,
+    "warmup_runs": 10
+  },
+  "average_confidence": 0.835086,
+  "hardware": {
+    "processor": "Apple M4",
+    "memory_gb": 24,
+    "architecture": "arm64",
+    "operating_system": "macOS",
+    "benchmark_device": "CPU"
+  },
+  "training": {
+    "sample_count": 28567,
+    "training_seconds": 3.780514
+  }
+}

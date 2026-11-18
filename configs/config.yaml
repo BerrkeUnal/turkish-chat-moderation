@@ -1,0 +1,97 @@
+project:
+  name: "Turkish Real-Time Chat Moderation"
+  seed: 42
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  artifacts_dir: "artifacts"
+  reports_dir: "reports"
+  lexicon_file: "resources/lexicons/offensive_terms.txt"
+
+data:
+  source_url: "https://coltekin.github.io/offensive-turkish/offenseval2020-turkish.zip"
+  archive_name: "offenseval2020-turkish.zip"
+  train_member: "offenseval2020-turkish/offenseval-tr-training-v1/offenseval-tr-training-v1.tsv"
+  test_member: "offenseval2020-turkish/offenseval-tr-testset-v1/offenseval-tr-testset-v1.tsv"
+  test_labels_member: "offenseval2020-turkish/offenseval-tr-testset-v1/offenseval-tr-labela-v1.tsv"
+  validation_size: 0.10
+  id_column: "id"
+  text_column: "text"
+  label_column: "label"
+  raw_text_column: "tweet"
+  raw_label_column: "subtask_a"
+
+labels:
+  clean: 0
+  offensive: 1
+  raw_mapping:
+    "NOT": 0
+    "OFF": 1
+
+preprocessing:
+  replace_urls: true
+  replace_user_mentions: true
+  lowercase_for_classical: true
+  max_repeated_characters: 2
+
+classical:
+  word_ngram_range: [1, 2]
+  char_ngram_range: [3, 5]
+  word_max_features: 50000
+  char_max_features: 75000
+  logistic_regression_c: 4.0
+  max_iter: 2000
+  class_weight: "balanced"
+  min_document_frequency: 2
+  solver: "liblinear"
+
+word2vec:
+  vector_size: 128
+  window: 5
+  min_count: 2
+  workers: 1
+  epochs: 15
+  skip_gram: 1
+  negative_samples: 10
+
+ffnn:
+  hidden_sizes: [128, 64]
+  dropout: 0.30
+  batch_size: 256
+  learning_rate: 0.001
+  max_epochs: 30
+  patience: 5
+  weight_decay: 0.0001
+  validation_batch_size: 512
+  training_device: "auto"
+
+transformer:
+  model_name: dbmdz/bert-base-turkish-cased
+  max_length: 128
+  batch_size: 8
+  gradient_accumulation_steps: 2
+  learning_rate: 0.00002
+  epochs: 3
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  gradient_clip_norm: 1.0
+  patience: 2
+  training_device: auto
+
+quantization:
+  method: "dynamic_int8"
+  execution_provider: "CPUExecutionProvider"
+
+hardware:
+  processor: "Apple M4"
+  memory_gb: 24
+  architecture: "arm64"
+  operating_system: "macOS"
+  benchmark_device: "CPU"
+
+benchmark:
+  warmup_runs: 10
+  measured_runs: 100
+  batch_size: 1
+  latency_budget_ms: 100

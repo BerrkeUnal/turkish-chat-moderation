@@ -1,0 +1,94 @@
+{
+  "split": "test",
+  "sample_count": 3528,
+  "primary_metric": "macro_f1",
+  "models": {
+    "rule_based": {
+      "model_name": "Rule-Based Edit Distance",
+      "accuracy": 0.826531,
+      "balanced_accuracy": 0.595528,
+      "macro_f1": 0.613223,
+      "offensive_precision": 0.770833,
+      "offensive_recall": 0.206704,
+      "offensive_f1": 0.325991,
+      "model_size_mb": 0.000351,
+      "mean_latency_ms": 0.10043,
+      "p95_latency_ms": 0.196652
+    },
+    "tfidf_logreg": {
+      "model_name": "TF-IDF Logistic Regression",
+      "accuracy": 0.849206,
+      "balanced_accuracy": 0.765907,
+      "macro_f1": 0.766462,
+      "offensive_precision": 0.629213,
+      "offensive_recall": 0.625698,
+      "offensive_f1": 0.627451,
+      "model_size_mb": 2.069803,
+      "mean_latency_ms": 0.598674,
+      "p95_latency_ms": 0.721081
+    },
+    "word2vec_ffnn": {
+      "model_name": "Word2Vec Feedforward Network",
+      "accuracy": 0.765023,
+      "balanced_accuracy": 0.706852,
+      "macro_f1": 0.678916,
+      "offensive_precision": 0.44264,
+      "offensive_recall": 0.608939,
+      "offensive_f1": 0.51264,
+      "model_size_mb": 27.110305,
+      "mean_latency_ms": 0.05868,
+      "p95_latency_ms": 0.083402
+    },
+    "berturk": {
+      "model_name": "BERTurk Fine-Tuned",
+      "accuracy": 0.88237,
+      "balanced_accuracy": 0.812216,
+      "macro_f1": 0.815987,
+      "offensive_precision": 0.717172,
+      "offensive_recall": 0.694134,
+      "offensive_f1": 0.705465,
+      "model_size_mb": 422.721803,
+      "mean_latency_ms": 14.739592,
+      "p95_latency_ms": 21.283002
+    },
+    "berturk_int8": {
+      "model_name": "BERTurk Dynamic INT8 ONNX",
+      "accuracy": 0.879819,
+      "balanced_accuracy": 0.806973,
+      "macro_f1": 0.811494,
+      "offensive_precision": 0.712209,
+      "offensive_recall": 0.684358,
+      "offensive_f1": 0.698006,
+      "model_size_mb": 178.815069,
+      "mean_latency_ms": 5.767795,
+      "p95_latency_ms": 11.143646
+    }
+  },
+  "ranking_by_macro_f1": [
+    "berturk",
+    "berturk_int8",
+    "tfidf_logreg",
+    "word2vec_ffnn",
+    "rule_based"
+  ],
+  "quantization_impact": {
+    "macro_f1_delta": -0.004493,
+    "accuracy_delta": -0.002551,
+    "offensive_recall_delta": -0.009776,
+    "size_reduction_percent": 57.699114,
+    "compression_ratio": 2.364017,
+    "latency_reduction_percent": 60.868693,
+    "latency_speedup": 2.555499
+  },
+  "deployment_selection": {
+    "model_key": "berturk_int8",
+    "reason": "Selected for deployment because it preserves Transformer classification quality while reducing model size and CPU inference latency."
+  },
+  "hardware": {
+    "processor": "Apple M4",
+    "memory_gb": 24,
+    "architecture": "arm64",
+    "operating_system": "macOS",
+    "benchmark_device": "CPU"
+  }
+}

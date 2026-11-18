@@ -1,0 +1,51 @@
+{
+  "model_name": "BERTurk Dynamic INT8 ONNX",
+  "split": "validation",
+  "sample_count": 3175,
+  "model_size_mb": 178.815069,
+  "metrics": {
+    "accuracy": 0.897008,
+    "balanced_accuracy": 0.828216,
+    "macro_f1": 0.832537,
+    "offensive_precision": 0.741554,
+    "offensive_recall": 0.71615,
+    "offensive_f1": 0.728631,
+    "confusion_matrix": {
+      "true_negative": 2409,
+      "false_positive": 153,
+      "false_negative": 174,
+      "true_positive": 439
+    }
+  },
+  "latency": {
+    "measured_runs": 3175,
+    "mean_ms": 5.562162,
+    "median_ms": 4.882334,
+    "p95_ms": 10.729662,
+    "p99_ms": 13.278596,
+    "minimum_ms": 2.38825,
+    "maximum_ms": 20.263125,
+    "warmup_runs": 10
+  },
+  "average_confidence": 0.945758,
+  "hardware": {
+    "processor": "Apple M4",
+    "memory_gb": 24,
+    "architecture": "arm64",
+    "operating_system": "macOS",
+    "benchmark_device": "CPU"
+  },
+  "runtime": {
+    "execution_provider": "CPUExecutionProvider",
+    "dynamic_sequence_length": true,
+    "maximum_sequence_length": 128
+  },
+  "quantization": {
+    "method": "dynamic_int8",
+    "source_model_size_mb": 422.721803,
+    "fp32_onnx_size_mb": 423.679661,
+    "size_reduction_percent": 57.794748,
+    "compression_ratio": 2.369373,
+    "verification_labels_match": true
+  }
+}

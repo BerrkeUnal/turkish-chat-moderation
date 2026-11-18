@@ -1,0 +1,72 @@
+{
+  "model_name": "BERTurk Fine-Tuned",
+  "split": "validation",
+  "sample_count": 3175,
+  "model_size_mb": 422.721803,
+  "metrics": {
+    "accuracy": 0.894488,
+    "balanced_accuracy": 0.827895,
+    "macro_f1": 0.829734,
+    "offensive_precision": 0.730132,
+    "offensive_recall": 0.719413,
+    "offensive_f1": 0.724733,
+    "confusion_matrix": {
+      "true_negative": 2399,
+      "false_positive": 163,
+      "false_negative": 172,
+      "true_positive": 441
+    }
+  },
+  "latency": {
+    "measured_runs": 3175,
+    "mean_ms": 13.773118,
+    "median_ms": 12.589083,
+    "p95_ms": 18.774746,
+    "p99_ms": 20.849176,
+    "minimum_ms": 11.797,
+    "maximum_ms": 25.541083,
+    "warmup_runs": 10
+  },
+  "average_confidence": 0.947963,
+  "hardware": {
+    "processor": "Apple M4",
+    "memory_gb": 24,
+    "architecture": "arm64",
+    "operating_system": "macOS",
+    "benchmark_device": "CPU"
+  },
+  "training": {
+    "sample_count": 28567,
+    "training_seconds": 4898.754508,
+    "best_epoch": 2,
+    "epochs_completed": 3,
+    "best_validation_macro_f1": 0.829734,
+    "training_device": "mps",
+    "batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "effective_batch_size": 16,
+    "learning_rate": 2e-05,
+    "warmup_steps": 535,
+    "class_weights": [
+      0.619702,
+      2.588528
+    ],
+    "history": [
+      {
+        "epoch": 1,
+        "training_loss": 0.468796,
+        "validation_macro_f1": 0.81099
+      },
+      {
+        "epoch": 2,
+        "training_loss": 0.304583,
+        "validation_macro_f1": 0.829734
+      },
+      {
+        "epoch": 3,
+        "training_loss": 0.197752,
+        "validation_macro_f1": 0.828996
+      }
+    ]
+  }
+}

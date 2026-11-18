@@ -1,0 +1,25 @@
+{
+  "source_model": "BERTurk Fine-Tuned",
+  "quantized_model": "BERTurk Dynamic INT8 ONNX",
+  "source_model_size_mb": 422.721803,
+  "fp32_onnx_size_mb": 423.679661,
+  "int8_onnx_size_mb": 178.815069,
+  "size_reduction_percent": 57.794748,
+  "compression_ratio": 2.369373,
+  "export_seconds": 3.334834,
+  "quantization_seconds": 1.35734,
+  "verification": {
+    "sample_text": "Bugün arkadaşlarımla güzel vakit geçirdim.",
+    "pytorch_label": 0,
+    "fp32_onnx_label": 0,
+    "int8_label": 0,
+    "fp32_max_absolute_logit_difference": 9.5e-07,
+    "int8_max_absolute_logit_difference": 0.03680873,
+    "labels_match": true
+  },
+  "artifacts": {
+    "fp32_onnx": "/Users/berkeunal/Projects/turkish-chat-moderation/artifacts/berturk_onnx/berturk_fp32.onnx",
+    "int8_onnx": "/Users/berkeunal/Projects/turkish-chat-moderation/artifacts/berturk_int8/berturk_int8.onnx",
+    "metadata": "/Users/berkeunal/Projects/turkish-chat-moderation/artifacts/berturk_int8/metadata.json"
+  }
+}

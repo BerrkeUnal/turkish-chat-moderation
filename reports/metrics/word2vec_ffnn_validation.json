@@ -1,0 +1,99 @@
+{
+  "model_name": "Word2Vec Feedforward Network",
+  "split": "validation",
+  "sample_count": 3175,
+  "model_size_mb": 27.110305,
+  "metrics": {
+    "accuracy": 0.770709,
+    "balanced_accuracy": 0.722654,
+    "macro_f1": 0.68488,
+    "offensive_precision": 0.436464,
+    "offensive_recall": 0.644372,
+    "offensive_f1": 0.520422,
+    "confusion_matrix": {
+      "true_negative": 2052,
+      "false_positive": 510,
+      "false_negative": 218,
+      "true_positive": 395
+    }
+  },
+  "latency": {
+    "measured_runs": 3175,
+    "mean_ms": 0.058096,
+    "median_ms": 0.054542,
+    "p95_ms": 0.083371,
+    "p99_ms": 0.091095,
+    "minimum_ms": 0.040166,
+    "maximum_ms": 0.149667,
+    "warmup_runs": 10
+  },
+  "average_confidence": 0.716568,
+  "hardware": {
+    "processor": "Apple M4",
+    "memory_gb": 24,
+    "architecture": "arm64",
+    "operating_system": "macOS",
+    "benchmark_device": "CPU"
+  },
+  "training": {
+    "sample_count": 28567,
+    "training_seconds": 26.33703,
+    "best_epoch": 5,
+    "epochs_completed": 10,
+    "best_validation_macro_f1": 0.68488,
+    "word2vec_vocabulary_size": 29345,
+    "training_device": "mps",
+    "history": [
+      {
+        "epoch": 1,
+        "training_loss": 0.637432,
+        "validation_macro_f1": 0.632876
+      },
+      {
+        "epoch": 2,
+        "training_loss": 0.583485,
+        "validation_macro_f1": 0.680808
+      },
+      {
+        "epoch": 3,
+        "training_loss": 0.570343,
+        "validation_macro_f1": 0.643438
+      },
+      {
+        "epoch": 4,
+        "training_loss": 0.562638,
+        "validation_macro_f1": 0.632649
+      },
+      {
+        "epoch": 5,
+        "training_loss": 0.558031,
+        "validation_macro_f1": 0.68488
+      },
+      {
+        "epoch": 6,
+        "training_loss": 0.549551,
+        "validation_macro_f1": 0.643262
+      },
+      {
+        "epoch": 7,
+        "training_loss": 0.544389,
+        "validation_macro_f1": 0.607525
+      },
+      {
+        "epoch": 8,
+        "training_loss": 0.54154,
+        "validation_macro_f1": 0.664674
+      },
+      {
+        "epoch": 9,
+        "training_loss": 0.537222,
+        "validation_macro_f1": 0.663832
+      },
+      {
+        "epoch": 10,
+        "training_loss": 0.533777,
+        "validation_macro_f1": 0.660631
+      }
+    ]
+  }
+}

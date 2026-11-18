@@ -1,0 +1,28 @@
+# Data and classical machine learning
+numpy==2.4.6
+pandas==3.0.6
+scipy==1.16.3
+scikit-learn==1.9.1
+joblib==1.6.0
+gensim==4.4.0
+rapidfuzz>=3.13,<4
+PyYAML==6.0.3
+
+# Deep learning and transformers
+torch==2.14.1
+transformers==5.20.2
+
+# ONNX export, quantization and CPU inference
+onnx==1.23.2
+onnxscript==0.7.2
+onnxruntime==1.31.1
+
+# Application
+gradio==6.30.0
+
+# Testing and code quality
+pytest==8.4.2
+ruff==0.16.9
+
+# Install this project from the src directory layout
+-e .
