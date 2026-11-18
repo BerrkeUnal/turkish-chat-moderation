@@ -122,24 +122,45 @@ python -m pip install -r requirements.txt
 
 Large trained model files are not stored in the repository.
 
-Download `artifacts.zip` from:
+Download the model package from Google Drive:
+
+[Download Turkish Chat Moderation model artifacts](https://drive.google.com/file/d/1VcliMxgD2nJeGZrp1Zhwh5UVeP_opftf/view?usp=sharing)
+
+File name:
 
 ```text
-<MODEL_DOWNLOAD_URL>
+turkish-chat-moderation-artifacts.zip
 ```
 
-Extract it into the repository root. The final structure must be:
+SHA-256:
+
+```text
+ac9600d9e7bd9e742f416203b3284d1ca00aac9e8361f6c9ff70b3975780a512
+```
+
+Extract the archive into the repository root:
+
+```bash
+unzip /path/to/turkish-chat-moderation-artifacts.zip -d .
+```
+
+The archive already contains the top-level `artifacts` directory. The final structure must be:
 
 ```text
 artifacts/
 ├── berturk/
 ├── berturk_int8/
-├── berturk_onnx/
 ├── tfidf_logreg/
 └── word2vec_ffnn/
 ```
 
 The rule-based model uses the lexicon stored in `resources/`.
+
+Optionally verify the downloaded archive:
+
+```bash
+shasum -a 256 turkish-chat-moderation-artifacts.zip
+```
 
 ## Run the Application
 
